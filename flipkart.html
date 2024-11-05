@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="UTF-8">
+  <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlipKart</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .FlipKart_title {
+      margin-right: 20px;
+    }
+
+    .flipsearchflex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .searchicon {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+
+    .SearchType {
+      margin-left: 10px;
+      margin-right: 150px;
+    }
+
+    .LoginIcon {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .LoginTitle {
+      margin-right: 10px;
+    }
+
+    .LoginSectionflex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ShoppingTrolly {
+      margin-right: 15px;
+      margin-left: 10px;
+    }
+
+    .ShopIcon {
+      margin-right: 20px;
+    }
+
+    .TrllyShopDotFlex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+      padding: 20px;
+      background-color: rgb(255, 255, 255);
+      height: 20px;
+    }
+
+    .FashionTitle {
+      margin-right: 7px;
+    }
+
+
+    .FashionMenuFlex {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+
+    .ElectronicTitle {
+      margin-right: 7px;
+    }
+
+    .ElectronicMenuFlex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .HomeFurnitureTitle {
+      margin-right: 7px;
+    }
+
+    .HomeFurnitureMenuFlex {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+
+    .BeautyToysTitle {
+      margin-right: 7px;
+    }
+
+    .BeautyToysMenuFlex {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+
+    .TwoWheelersTitle {
+      margin-right: 7px;
+    }
+
+    .TwoWheelersMenuFlex {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+
+    .Categorys {
+      font-family: "Arial", Helvetica, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+      padding: 20px;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .Categorys {
+      text-align: center;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .Grocery {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .Mobiles {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .Fashion {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .Electronic {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .HomeFurniture {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .Appliances {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .FlightBookings {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .BeautyToys {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .TwoWheelers {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .WatchTP {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Watch {
+      height: 200px;
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: solid lightgray;
+      margin-right: 10px;
+    }
+
+
+    .EarphonesTP {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Earphones {
+      height: 200px;
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: solid lightgray;
+      margin-right: 10px;
+    }
+
+    .PrintersTP {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .Printers {
+      height: 200px;
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: solid lightgray;
+      margin-right: 10px;
+    }
+
+    .ProjectorTP {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Projector {
+      height: 200px;
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: solid lightgray;
+      margin-right: 10px;
+    }
+
+    .MonitorTP {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Monitor {
+      height: 200px;
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: solid lightgray;
+      margin-right: 10px;
+    }
+
+    .SpeakerTP {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Speaker {
+      height: 200px;
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: solid lightgray;
+      margin-right: 10px;
+    }
+
+    .CameraTP {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Camera {
+      height: 200px;
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: solid lightgray;
+      margin-right: 10px;
+    }
+
+    .ShaversTP {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Shavers {
+      height: 200px;
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: solid lightgray;
+      margin-right: 10px;
+    }
+
+    .BestofElectronics{
+      margin-top: 30px;
+      margin-bottom: 15px;
+      padding: 20px;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .BOElectronics {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      
+    }
+
+  .BOElectronics img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  }
+
+  .BOFImg img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .BOFGrid img{
+    width: 100%;
+    height: 200px;
+  }
+
+  .BOFGrid{
+    height: auto;
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+
+  @media (max-width: 750px){
+    .searchbar {
+    display: none; 
+  }
+  }
+
+  @media (max-width:1000px) {
+    .TrllyDes{
+      display: none;
+    }
+  }
+
+  @media (max-width: 770px)
+  {
+    .BOElectronics {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .Watch, .Earphones, .Printers, .Projector, .Monitor, .Speaker, .Camera, .Shavers{
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border: 2px solid lightgrey; 
+        height: auto;
+        width: 90%; 
+        
+      }
+
+      .WatchImg img, .EarphonesImg img, .Printers img, .Projector img, .Monitor img, .Speaker img, .Camera img, .Shavers img {
+        width: 80px; 
+        height: 80px;
+      }
+
+      .WatchTP, .EarphonesTP, .PrintersTP, .ProjectorTP, .MonitorTP, .SpeakerTP, .CameraTP, .ShaversTP {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; 
+        align-items: flex-start;
+        text-align: left; 
+        margin-left: 20px;
+      }
+    }
+
+    @media (max-width: 770px){
+      .Categorys{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+
+      .Grocery, .Mobiles, .Fashion, .Electronic, .HomeFurniture, .Appliances, .FlightBookings, .BeautyToys, .TwoWheelers{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .Grocery img, .Mobiles img, .Fashion img, .Electronic img, .HomeFurniture img, .Appliances img, .FlightBookings img, .BeautyToys img, .TwoWheelers img{
+        margin-right: 20px;
+      }
+    }
+
+    @media (max-width: 770px)
+    {
+      .BOFGrid{
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="flipsearchflex">
+      <div class="FlipKart_title">
+        <img
+          src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg"
+          width="160" height="40" title="Flipkart">
+      </div>
+      <div class="searchbar">
+        <button class="searchicon">
+          <svg width="24" height="24" class="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <title>Search Icon</title>
+            <path
+              d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z"
+              stroke="#717478" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M16 16L21 21" stroke="#717478" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            </path>
+          </svg>
+          <p class="SearchType">Search for Products, Brands and More</p>
+        </button>
+      </div>
+    </div>
+    <div class="LoginSectionflex">
+      <div class="LoginIcon">
+        <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-52e0dc.svg"
+          alt="Login" width="24" height="24">
+      </div>
+      <div class="LoginTitle">
+        <span>Login</span>
+      </div>
+      <div class="LoginMenu">
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxNCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfZF80OTc0Xzc1OTY5KSI+CjxwYXRoIGQ9Ik0zIDJMNyA2TDExIDIiIHN0cm9rZT0iIzExMTExMiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L2c+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2RfNDk3NF83NTk2OSIgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjEzLjUiIGhlaWdodD0iOS44MTI1IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHk9IjEiLz4KPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwMC4xNiAwIi8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0iZWZmZWN0MV9kcm9wU2hhZG93XzQ5NzRfNzU5NjkiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJlZmZlY3QxX2Ryb3BTaGFkb3dfNDk3NF83NTk2OSIgcmVzdWx0PSJzaGFwZSIvPgo8L2ZpbHRlcj4KPC9kZWZzPgo8L3N2Zz4K"
+          alt="Chevron" class="-dOa_b XdYXbi" width="12" height="12">
+      </div>
+    </div>
+
+    <div class="TrllyShopDotFlex">
+      <div class="ShoppingTrolly">
+        <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg"
+          alt="Cart" class="_1XmrCc" width="24" height="24">
+      </div>
+
+      <div class="ShopIcon">
+        <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/Store-9eeae2.svg"
+          alt="Become a Seller" class="_1XmrCc">
+        <span class="TrllyDes">Become a Seller</span>
+      </div>
+
+      <div class="ThreeDotIcon">
+        <img
+          src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_3verticalDots-ea7819.svg"
+          width="24" height="24" alt="Dropdown with more help links">
+      </div>
+    </div>
+  </div>
+
+  <div class="Categorys">
+    <div class="Grocery">
+      <img alt="Grocery" src="https://rukminim2.flixcart.com/flap/96/96/image/29327f40e9c4d26b.png?q=100">
+      <a
+        href="https://www.flipkart.com/grocery-supermart-store?marketplace=GROCERY&fm=neo%2Fmerchandising&iid=M_0605db97-3fe9-48ab-8dc8-d93eadfa4d6b_1_372UD5BXDFYS_MC.CBUR1Q46W5F1&otracker=hp_rich_navigation_1_1.navigationCard.RICH_NAVIGATION_Grocery_CBUR1Q46W5F1&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_1_L0_view-all&cid=CBUR1Q46W5F1"></a>
+      <p>Grocery</p>
+    </div>
+
+
+    <div class="Mobiles">
+      <img alt="Mobiles" src="https://rukminim2.flixcart.com/flap/96/96/image/22fddf3c7da4c4f4.png?q=100">
+      <a
+        href="https://www.flipkart.com/mobile-phones-store?fm=neo%2Fmerchandising&iid=M_708e7b6e-9cb0-4f6f-a539-dd7ac7c9417f_1_372UD5BXDFYS_MC.ZRQ4DKH28K8J&otracker=hp_rich_navigation_2_1.navigationCard.RICH_NAVIGATION_Mobiles_ZRQ4DKH28K8J&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L0_view-all&cid=ZRQ4DKH28K8J"></a>
+      <p>Mobiles</p>
+    </div>
+
+    <div class="Fashion">
+      <img alt="Fashion" src="https://rukminim2.flixcart.com/fk-p-flap/96/96/image/0d75b34f7d8fbcb3.png?q=100">
+      <div class="FashionMenuFlex">
+        <div class="FashionTitle">
+          <p>Fashion</p>
+        </div>
+        <div class="FashionMenu">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxNCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfZF80OTc0Xzc1OTY5KSI+CjxwYXRoIGQ9Ik0zIDJMNyA2TDExIDIiIHN0cm9rZT0iIzExMTExMiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L2c+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2RfNDk3NF83NTk2OSIgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjEzLjUiIGhlaWdodD0iOS44MTI1IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHk9IjEiLz4KPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwMC4xNiAwIi8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0iZWZmZWN0MV9kcm9wU2hhZG93XzQ5NzRfNzU5NjkiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJlZmZlY3QxX2Ryb3BTaGFkb3dfNDk3NF83NTk2OSIgcmVzdWx0PSJzaGFwZSIvPgo8L2ZpbHRlcj4KPC9kZWZzPgo8L3N2Zz4K"
+            alt="Chevron" class="-dOa_b XdYXbi" width="12" height="12">
+        </div>
+      </div>
+    </div>
+
+    <div class="Electronic">
+      <img alt="Electronic" src="https://rukminim2.flixcart.com/flap/96/96/image/69c6589653afdb9a.png?q=100">
+      <div class="ElectronicMenuFlex">
+        <div class="ElectronicTitle">
+          <p>Electronics</p>
+        </div>
+        <div class="ElectronicMenu">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxNCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfZF80OTc0Xzc1OTY5KSI+CjxwYXRoIGQ9Ik0zIDJMNyA2TDExIDIiIHN0cm9rZT0iIzExMTExMiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L2c+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2RfNDk3NF83NTk2OSIgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjEzLjUiIGhlaWdodD0iOS44MTI1IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHk9IjEiLz4KPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwMC4xNiAwIi8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0iZWZmZWN0MV9kcm9wU2hhZG93XzQ5NzRfNzU5NjkiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJlZmZlY3QxX2Ryb3BTaGFkb3dfNDk3NF83NTk2OSIgcmVzdWx0PSJzaGFwZSIvPgo8L2ZpbHRlcj4KPC9kZWZzPgo8L3N2Zz4K"
+            alt="Chevron" class="-dOa_b XdYXbi" width="12" height="12">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="HomeFurniture">
+      <img alt="Home &amp; Furniture" src="https://rukminim2.flixcart.com/flap/96/96/image/ab7e2b022a4587dd.jpg?q=100">
+      <div class="HomeFurnitureMenuFlex">
+        <div class="HomeFurnitureTitle">
+          <p>Home & Furniture</p>
+        </div>
+        <div class="HomeFurnitureMenu">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxNCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfZF80OTc0Xzc1OTY5KSI+CjxwYXRoIGQ9Ik0zIDJMNyA2TDExIDIiIHN0cm9rZT0iIzExMTExMiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L2c+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2RfNDk3NF83NTk2OSIgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjEzLjUiIGhlaWdodD0iOS44MTI1IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHk9IjEiLz4KPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwMC4xNiAwIi8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0iZWZmZWN0MV9kcm9wU2hhZG93XzQ5NzRfNzU5NjkiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJlZmZlY3QxX2Ryb3BTaGFkb3dfNDk3NF83NTk2OSIgcmVzdWx0PSJzaGFwZSIvPgo8L2ZpbHRlcj4KPC9kZWZzPgo8L3N2Zz4K"
+            alt="Chevron" class="-dOa_b XdYXbi" width="12" height="12">
+        </div>
+      </div>
+    </div>
+
+    <div class="Appliances">
+      <img alt="Appliances" src="https://rukminim2.flixcart.com/fk-p-flap/96/96/image/0139228b2f7eb413.jpg?q=100">
+      <a
+        href="https://www.flipkart.com/tvs-and-appliances-new-clp-store?fm=neo%2Fmerchandising&iid=M_0c6d3995-4ff3-4132-8332-2ebe5eb8ec36_1_372UD5BXDFYS_MC.LO4IWVHA61BX&otracker=hp_rich_navigation_6_1.navigationCard.RICH_NAVIGATION_Appliances_LO4IWVHA61BX&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_6_L0_view-all&cid=LO4IWVHA61BX"></a>
+      <p>Appliances</p>
+    </div>
+
+    <div class="FlightBookings">
+      <img alt="Flight Bookings" src="https://rukminim2.flixcart.com/flap/96/96/image/71050627a56b4693.png?q=100">
+      <a
+        href="https://www.flipkart.com/travel/flights?param=DTNavIcon&fm=neo%2Fmerchandising&iid=M_0b4835fb-3d3e-40d7-b673-0a72fb6af361_1_372UD5BXDFYS_MC.V4ZPKTOAO321&otracker=hp_rich_navigation_7_1.navigationCard.RICH_NAVIGATION_Flight%2BBookings_V4ZPKTOAO321&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_7_L0_view-all&cid=V4ZPKTOAO321"></a>
+      <p>Flight Bookings</p>
+    </div>
+
+    <div class="BeautyToys">
+      <img alt="Beauty, Toys &amp; More"
+        src="https://rukminim2.flixcart.com/flap/96/96/image/dff3f7adcf3a90c6.png?q=100">
+      <div class="BeautyToysMenuFlex">
+        <div class="BeautyToysTitle">
+          <p>Beauty, Toys & More</p>
+        </div>
+        <div class="BeautyToysMenu">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxNCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfZF80OTc0Xzc1OTY5KSI+CjxwYXRoIGQ9Ik0zIDJMNyA2TDExIDIiIHN0cm9rZT0iIzExMTExMiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L2c+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2RfNDk3NF83NTk2OSIgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjEzLjUiIGhlaWdodD0iOS44MTI1IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHk9IjEiLz4KPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwMC4xNiAwIi8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0iZWZmZWN0MV9kcm9wU2hhZG93XzQ5NzRfNzU5NjkiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJlZmZlY3QxX2Ryb3BTaGFkb3dfNDk3NF83NTk2OSIgcmVzdWx0PSJzaGFwZSIvPgo8L2ZpbHRlcj4KPC9kZWZzPgo8L3N2Zz4K"
+            alt="Chevron" class="-dOa_b XdYXbi" width="12" height="12">
+        </div>
+      </div>
+    </div>
+
+    <div class="TwoWheelers">
+      <img alt="Two Wheelers" src="https://rukminim2.flixcart.com/fk-p-flap/96/96/image/05d708653beff580.png?q=100">
+      <div class="TwoWheelersMenuFlex">
+        <div class="TwoWheelersTitle">
+          <p>Two Wheelers</p>
+        </div>
+        <div class="TwoWheelersMenu">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxNCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfZF80OTc0Xzc1OTY5KSI+CjxwYXRoIGQ9Ik0zIDJMNyA2TDExIDIiIHN0cm9rZT0iIzExMTExMiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L2c+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2RfNDk3NF83NTk2OSIgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjEzLjUiIGhlaWdodD0iOS44MTI1IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHk9IjEiLz4KPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwMC4xNiAwIi8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0iZWZmZWN0MV9kcm9wU2hhZG93XzQ5NzRfNzU5NjkiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJlZmZlY3QxX2Ryb3BTaGFkb3dfNDk3NF83NTk2OSIgcmVzdWx0PSJzaGFwZSIvPgo8L2ZpbHRlcj4KPC9kZWZzPgo8L3N2Zz4K"
+            alt="Chevron" class="-dOa_b XdYXbi" width="12" height="12">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ScrollPic">
+    <img src="FlipKartImg.png" alt="Image" style="position: static; width: 100vw; height: 180px;">
+  </div>
+
+  <div class="BestofElectronics">
+    <h3>Best of Electronics</h3>
+
+    <div class="BOElectronics">
+      <div class="Watch">
+        <a
+          href="https://www.flipkart.com/wearable-smart-devices/smart-watches/pr?sid=ajy%2Cbuh&marketplace=FLIPKART&p%5B%5D=facets.brand%255B%255D%3DFastrack&hpid=SVKCw8G6nMCuH4Eqbt2Crap7_Hsxr70nj65vMAAFKlc%3D&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJGcm9tIOKCuTEsMzk5Il0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fSwiaGVyb1BpZCI6eyJzaW5nbGVWYWx1ZUF0dHJpYnV0ZSI6eyJrZXkiOiJoZXJvUGlkIiwiaW5mZXJlbmNlVHlwZSI6IlBJRCIsInZhbHVlIjoiU01XR040WUVXR05aMkdHTSIsInZhbHVlVHlwZSI6IlNJTkdMRV9WQUxVRUQifX0sInRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkZhc3RyYWNrIFNtYXJ0d2F0Y2hlcyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D"></a>
+        <div class="WatchImg">
+          <img
+            src="https://rukminim2.flixcart.com/image/170/170/xif0q/smartwatch/5/v/s/-original-imagxrhetgfuebnn.jpeg?q=90"
+            style="width: 100%; margin: auto; display: block; object-fit: contain; opacity: 1; aspect-ratio: 1 / 1;"
+            loading="lazy" alt="Image"
+            srcset="https://rukminim2.flixcart.com/image/80/80/xif0q/smartwatch/5/v/s/-original-imagxrhetgfuebnn.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/160/160/xif0q/smartwatch/5/v/s/-original-imagxrhetgfuebnn.jpeg?q=60 2x, ">
+        </div>
+
+        <div class="WatchTP">
+          <div class="WatchTitle">
+            <p>Fastrack Smartwatches</p>
+          </div>
+          <div class="WatchPrice">
+            <p style="font-weight: bold;">From Rs.999</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="Earphones">
+        <a alt="Earphones"
+          href="https://www.flipkart.com/audio-video/headset/pr?sid=0pm%2Cfcn&p%5B%5D=facets.connectivity%255B%255D%3DBluetooth&sort=popularity&p%5B%5D=facets.rating%255B%255D%3D3%25E2%2598%2585%2B%2526%2Babove&p%5B%5D=facets.rating%255B%255D%3D4%25E2%2598%2585%2B%2526%2Babove&p%5B%5D=facets.price_range.from%3D599&p%5B%5D=facets.price_range.to%3DMax&p%5B%5D=facets.headphone_type%255B%255D%3DTrue%2BWireless&param=866&hpid=WqCPtE2MbDEYEbYbttXC1qp7_Hsxr70nj65vMAAFKlc%3D&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJHcmFiIE5vdyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX0sImhlcm9QaWQiOnsic2luZ2xlVmFsdWVBdHRyaWJ1dGUiOnsia2V5IjoiaGVyb1BpZCIsImluZmVyZW5jZVR5cGUiOiJQSUQiLCJ2YWx1ZSI6IkFDQ0ZTREdYWDNTNkRWQkciLCJ2YWx1ZVR5cGUiOiJTSU5HTEVfVkFMVUVEIn19LCJ0aXRsZSI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ0aXRsZSIsImluZmVyZW5jZVR5cGUiOiJUSVRMRSIsInZhbHVlcyI6WyJCZXN0IFRydWV3aXJlbGVzcyBIZWFkcGhvbmVzIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fX19fQ%3D%3D"></a>
+        <div class="EarphonesImg">
+          <img alt="Earphones"
+            src="https://rukminim2.flixcart.com/image/170/170/l58iaa80/headphone/k/z/m/nord-buds-ce-oneplus-original-imagfyk4hyvgg6ze.jpeg?q=90"
+            style="width: 100%; margin: auto; display: block; object-fit: contain; opacity: 1; aspect-ratio: 1 / 1;"
+            loading="lazy" alt="Image"
+            srcset="https://rukminim2.flixcart.com/image/80/80/l58iaa80/headphone/k/z/m/nord-buds-ce-oneplus-original-imagfyk4hyvgg6ze.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/160/160/l58iaa80/headphone/k/z/m/nord-buds-ce-oneplus-original-imagfyk4hyvgg6ze.jpeg?q=60 2x, ">
+        </div>
+
+        <div class="EarphonesTP">
+          <div class="EarphonesTitle">
+            <p>Best Truewireless Earphones</p>
+          </div>
+          <div class="EarphonesPrice">
+            <p style="font-weight: bold;">Grab Now</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="Printers">
+        <a alt="Printers"
+          href="https://www.flipkart.com/computers/computer-peripherals/printers-inks/printers/pr?sid=6bo%2Ctia%2Cffn%2Ct64&fm=neo%2Fmerchandising&iid=M_2731d14e-2583-4664-a065-6fc7ea504a6d_2_372UD5BXDFYS_MC.ES1XN5J8PT49&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L2_view-all&cid=ES1XN5J8PT49&p%5B%5D=facets.fulfilled_by%255B%255D%3DFlipkart%2BAssured&p%5B%5D=facets.brand%255B%255D%3DCanon&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJGcm9tIOKCuTIzMzYiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19LCJ0aXRsZSI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ0aXRsZSIsImluZmVyZW5jZVR5cGUiOiJUSVRMRSIsInZhbHVlcyI6WyJQcmludGVycyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX0sImhlcm9QaWQiOnsic2luZ2xlVmFsdWVBdHRyaWJ1dGUiOnsia2V5IjoiaGVyb1BpZCIsImluZmVyZW5jZVR5cGUiOiJQSUQiLCJ2YWx1ZSI6IlBSTkY4NFBIWVJTU1pNRkciLCJ2YWx1ZVR5cGUiOiJTSU5HTEVfVkFMVUVEIn19fX19"></a>
+        <div class="PrintersImg">
+          <img
+            src="https://rukminim2.flixcart.com/image/170/170/xif0q/printer/d/4/f/-original-imagtzvzgggbgqs6.jpeg?q=90"
+            style="width: 100%; margin: auto; display: block; object-fit: contain; opacity: 1; aspect-ratio: 1 / 1;"
+            loading="lazy" alt="Image"
+            srcset="https://rukminim2.flixcart.com/image/80/80/xif0q/printer/d/4/f/-original-imagtzvzgggbgqs6.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/160/160/xif0q/printer/d/4/f/-original-imagtzvzgggbgqs6.jpeg?q=60 2x, ">
+        </div>
+
+        <div class="PrintersTP">
+          <div class="PrintersTitle">
+            <p>Printers</p>
+          </div>
+          <div class="PrintersPrice">
+            <p style="font-weight: bold;">From Rs.2336</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="Projector">
+        <a alt="Projector"
+          href="https://www.flipkart.com/computers/computer-peripherals/projectors/pr?sid=6bo%2Ctia%2C1hx&fm=neo%2Fmerchandising&iid=M_0cc842bf-96c6-4409-b385-b0a904682f33_2_372UD5BXDFYS_MC.ICU0BSHGNPBF&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_4_L2_view-all&cid=ICU0BSHGNPBF&p%5B%5D=facets.fulfilled_by%255B%255D%3DFlipkart%2BAssured&p%5B%5D=facets.brand%255B%255D%3DEgate&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJGcm9tIOKCuTY5OTAiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19LCJ0aXRsZSI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ0aXRsZSIsImluZmVyZW5jZVR5cGUiOiJUSVRMRSIsInZhbHVlcyI6WyJQcm9qZWN0b3IiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19LCJoZXJvUGlkIjp7InNpbmdsZVZhbHVlQXR0cmlidXRlIjp7ImtleSI6Imhlcm9QaWQiLCJpbmZlcmVuY2VUeXBlIjoiUElEIiwidmFsdWUiOiJQUk9FSEhINlVQWk5UUDVEIiwidmFsdWVUeXBlIjoiU0lOR0xFX1ZBTFVFRCJ9fX19fQ%3D%3D"></a>
+        <div class="ProjectorImg">
+          <img
+            src="https://rukminim2.flixcart.com/image/170/170/xif0q/projector/q/7/6/i9-pro-10-ei9027-led-projector-egate-original-imah5e3bggu5qcgp.jpeg?q=90"
+            style="width: 100%; margin: auto; display: block; object-fit: contain; opacity: 1; aspect-ratio: 1 / 1;"
+            loading="lazy" alt="Image"
+            srcset="https://rukminim2.flixcart.com/image/80/80/xif0q/projector/q/7/6/i9-pro-10-ei9027-led-projector-egate-original-imah5e3bggu5qcgp.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/160/160/xif0q/projector/q/7/6/i9-pro-10-ei9027-led-projector-egate-original-imah5e3bggu5qcgp.jpeg?q=60 2x, ">
+        </div>
+
+        <div class="ProjectorTP">
+          <div class="ProjectorTitle">
+            <p>Projector</p>
+          </div>
+          <div class="ProjectorPrice">
+            <p style="font-weight: bold;">From Rs.2336</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="Monitor">
+        <a alt="Monitor"
+          href="https://www.flipkart.com/computers/monitors/pr?sid=6bo%2C9no&fm=neo%2Fmerchandising&iid=M_ce1a6f68-d7d2-4ae1-875c-0d0877d9a11f_2_372UD5BXDFYS_MC.ECL5SFI77NSY&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_3_L2_view-all&cid=ECL5SFI77NSY&p%5B%5D=facets.fulfilled_by%255B%255D%3DFlipkart%2BAssured&p%5B%5D=facets.brand%255B%255D%3DLenovo&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJGcm9tIOKCuTc5NDkiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19LCJ0aXRsZSI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ0aXRsZSIsImluZmVyZW5jZVR5cGUiOiJUSVRMRSIsInZhbHVlcyI6WyJNb25pdG9ycyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX0sImhlcm9QaWQiOnsic2luZ2xlVmFsdWVBdHRyaWJ1dGUiOnsia2V5IjoiaGVyb1BpZCIsImluZmVyZW5jZVR5cGUiOiJQSUQiLCJ2YWx1ZSI6Ik1PTkdRV1pZWkhIN0NXUFoiLCJ2YWx1ZVR5cGUiOiJTSU5HTEVfVkFMVUVEIn19fX19"></a>
+        <div class="MonitorImg">
+          <img
+            src="https://rukminim2.flixcart.com/image/170/170/xif0q/monitor/i/7/m/l22e-40-full-hd-21-5-2023-67afkacbin-lenovo-original-imagqz29fzbfwhdg.jpeg?q=90"
+            style="width: 100%; margin: auto; display: block; object-fit: contain; opacity: 1; aspect-ratio: 1 / 1;"
+            loading="lazy" alt="Image"
+            srcset="https://rukminim2.flixcart.com/image/80/80/xif0q/monitor/i/7/m/l22e-40-full-hd-21-5-2023-67afkacbin-lenovo-original-imagqz29fzbfwhdg.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/160/160/xif0q/monitor/i/7/m/l22e-40-full-hd-21-5-2023-67afkacbin-lenovo-original-imagqz29fzbfwhdg.jpeg?q=60 2x, ">
+        </div>
+
+        <div class="MonitorTP">
+          <div class="MonitorTitle">
+            <p>Monitor</p>
+          </div>
+          <div class="MonitorPrice">
+            <p style="font-weight: bold;">From Rs.7949</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="Speaker">
+        <a alt="Speaker"
+          href="https://www.flipkart.com/audio-video/speakers/pr?sid=0pm%2C0o7&sort=popularity&param=8755&p%5B%5D=facets.rating%255B%255D%3D3%25E2%2598%2585%2B%2526%2Babove&p%5B%5D=facets.rating%255B%255D%3D4%25E2%2598%2585%2B%2526%2Babove&p%5B%5D=facets.price_range.from%3D599&p%5B%5D=facets.price_range.to%3DMax&p%5B%5D=facets.type%255B%255D%3DHome%2BAudio%2BSpeaker&p%5B%5D=facets.type%255B%255D%3DGaming%2BSpeaker&p%5B%5D=facets.type%255B%255D%3DHome%2BTheatre&p%5B%5D=facets.type%255B%255D%3DLaptop%252FDesktop%2BSpeaker&p%5B%5D=facets.type%255B%255D%3DMobile%252FTablet%2BSpeaker&p%5B%5D=facets.type%255B%255D%3DSoundbar&param=443&hpid=-9HuwFIVtikIZ8W21KTsvKp7_Hsxr70nj65vMAAFKlc%3D&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJGcm9tIOKCuTQ5OSoiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19LCJoZXJvUGlkIjp7InNpbmdsZVZhbHVlQXR0cmlidXRlIjp7ImtleSI6Imhlcm9QaWQiLCJpbmZlcmVuY2VUeXBlIjoiUElEIiwidmFsdWUiOiJBQ0NIM1pTOVlGWkU0RkRUIiwidmFsdWVUeXBlIjoiU0lOR0xFX1ZBTFVFRCJ9fSwidGl0bGUiOnsibXVsdGlWYWx1ZWRBdHRyaWJ1dGUiOnsia2V5IjoidGl0bGUiLCJpbmZlcmVuY2VUeXBlIjoiVElUTEUiLCJ2YWx1ZXMiOlsiQmVzdCBTZWxsaW5nIE1vYmlsZSBTcGVha2VycyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D"></a>
+        <div class="SpeakerImg">
+          <img
+            src="https://rukminim2.flixcart.com/image/170/170/kcf4lu80/speaker/mobile-tablet-speaker/h/u/f/srs-xb23-sony-original-imaftk66vjxp86h5.jpeg?q=90"
+            style="width: 100%; margin: auto; display: block; object-fit: contain; opacity: 1; aspect-ratio: 1 / 1;"
+            loading="lazy" alt="Image"
+            srcset="https://rukminim2.flixcart.com/image/80/80/kcf4lu80/speaker/mobile-tablet-speaker/h/u/f/srs-xb23-sony-original-imaftk66vjxp86h5.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/160/160/kcf4lu80/speaker/mobile-tablet-speaker/h/u/f/srs-xb23-sony-original-imaftk66vjxp86h5.jpeg?q=60 2x, ">
+        </div>
+
+        <div class="SpeakerTP">
+          <div class="SpeakerTitle">
+            <p>Best Selling Speakers</p>
+          </div>
+          <div class="SpeakerPrice">
+            <p style="font-weight: bold;">From Rs.499</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="Camera">
+        <a alt="Camera"
+          href="https://www.flipkart.com/cameras/dslr-mirrorless/pr?sid=jek%2Cp31%2Ctrv&p%5B%5D=facets.fulfilled_by%255B%255D%3DFlipkart%2BAssured&p%5B%5D=facets.type%255B%255D%3DMirrorless&param=179&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJTaG9wIE5vdyEiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19LCJ0aXRsZSI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ0aXRsZSIsImluZmVyZW5jZVR5cGUiOiJUSVRMRSIsInZhbHVlcyI6WyJUb3AgTWlycm9ybGVzcyBDYW1lcmFzIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fSwiaGVyb1BpZCI6eyJzaW5nbGVWYWx1ZUF0dHJpYnV0ZSI6eyJrZXkiOiJoZXJvUGlkIiwiaW5mZXJlbmNlVHlwZSI6IlBJRCIsInZhbHVlIjoiQ0FNSDRWNEpGRUJHVjhGViIsInZhbHVlVHlwZSI6IlNJTkdMRV9WQUxVRUQifX19fX0%3D"></a>
+        <div class="CameraImg">
+          <img
+            src="https://rukminim2.flixcart.com/image/170/170/xif0q/camera/x/r/t/na-smart-hd-indoor-wifi-magnet-night-vision-camera-365cam-original-imah5f882smctfb5.jpeg?q=90"
+            style="width: 100%; margin: auto; display: block; object-fit: contain; opacity: 1; aspect-ratio: 1 / 1;"
+            loading="lazy" alt="Image"
+            srcset="https://rukminim2.flixcart.com/image/80/80/xif0q/camera/x/r/t/na-smart-hd-indoor-wifi-magnet-night-vision-camera-365cam-original-imah5f882smctfb5.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/160/160/xif0q/camera/x/r/t/na-smart-hd-indoor-wifi-magnet-night-vision-camera-365cam-original-imah5f882smctfb5.jpeg?q=60 2x, ">
+        </div>
+
+        <div class="CameraTP">
+          <div class="CameraTitle">
+            <p>Top Mirrorless Cameras</p>
+          </div>
+          <div class="CameraPrice">
+            <p style="font-weight: bold;">Shop Now!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="Shavers">
+        <a href="https://www.flipkart.com/health-personal-care-appliances/personal-care-appliances/shavers/pr?sid=zlw%2C79s%2Cu3j&fm=neo%2Fmerchandising&iid=M_abc94b2e-c5ad-4d9f-a408-f077e0b71fda_1_372UD5BXDFYS_MC.7IRTITZ74DB6&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_3_L2_view-all&cid=7IRTITZ74DB6&hpid=zGQlhArn0YmltUO10UPgIKp7_Hsxr70nj65vMAAFKlc%3D&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJGcm9tIOKCuTEsNjQ5Il0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fSwiaGVyb1BpZCI6eyJzaW5nbGVWYWx1ZUF0dHJpYnV0ZSI6eyJrZXkiOiJoZXJvUGlkIiwiaW5mZXJlbmNlVHlwZSI6IlBJRCIsInZhbHVlIjoiU0hWR004QVlSSkI4WUNEUCIsInZhbHVlVHlwZSI6IlNJTkdMRV9WQUxVRUQifX0sInRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkJlc3Qgb2YgU2hhdmVycyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D"
+          alt="Shavers"></a>
+        <div class="ShaversImg">
+          <img
+            src="https://rukminim2.flixcart.com/image/170/170/kactpjk0/shaver/m/6/z/philips-s1121-45-s1121-45-original-imafry2qgxcwnm9r.jpeg?q=90"
+            style="width: 100%; margin: auto; display: block; object-fit: contain; opacity: 1; aspect-ratio: 1 / 1;"
+            loading="lazy" alt="Image"
+            srcset="https://rukminim2.flixcart.com/image/80/80/kactpjk0/shaver/m/6/z/philips-s1121-45-s1121-45-original-imafry2qgxcwnm9r.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/160/160/kactpjk0/shaver/m/6/z/philips-s1121-45-s1121-45-original-imafry2qgxcwnm9r.jpeg?q=60 2x, ">
+        </div>
+
+        <div class="ShaversTP">
+          <div class="ShaversTitle">
+            <p>Best of Shavers</p>
+          </div>
+          <div class="ShaversPrice">
+            <p style="font-weight: bold;">From Rs.1649</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="BestofFestive">
+    <div class="BOFImg">
+      <img src="https://rukminim2.flixcart.com/fk-p-flap/1000/90/image/e19216051bebca38.jpg?q=20" loading="eager" alt="Image">
+    </div>
+    <div class="BOFGrid">
+      <div>
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/320/170/image/a0ea8c94320fad9a.png?q=20" loading="eager" alt="Image">
+      </div>
+      <div>
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/320/170/image/ffdf835e3265e325.jpg?q=20" loading="eager" alt="Image">
+      </div>
+      <div>
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/320/170/image/c4a73dc7a16d6ed7.jpg?q=20" loading="eager" alt="Image">
+      </div>
+      <div>
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/320/170/image/16bcf5e93517a2f8.jpg?q=20" loading="eager" alt="Image" >
+      </div>
+      <div>
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/320/170/image/94390c9b5166a163.jpg?q=20" loading="eager" alt="Image" >
+      </div>
+      <div>
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/320/170/image/bf6427ad137bd8cd.png?q=20" loading="eager" alt="Image" >
+      </div>
+      <div>
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/320/170/image/aece35961499104b.jpg?q=20" loading="eager" alt="Image">
+      </div>
+      <div>
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/320/170/image/18b95d7661113602.jpg?q=20" loading="eager" alt="Image">
+      </div>
+      <div>
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/320/170/image/b18a6a737bd82423.jpg?q=20" loading="eager" alt="Image">
+      </div>
+      <div>
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/320/170/image/3c202aea7e9b51fb.jpg?q=20" loading="eager" alt="Image">
+      </div>
+      <div>
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/320/170/image/9b981e850f9ddb0b.jpg?q=20" loading="eager" alt="Image">
+      </div>
+      <div>
+        <img src="https://rukminim2.flixcart.com/fk-p-flap/320/170/image/b40f6b49fe96be7a.jpeg?q=20" loading="eager" alt="Image">
+      </div>
+    </div>
+    
+    
+
+
+
+  </div>
+
+
+</body>
+
+</html>

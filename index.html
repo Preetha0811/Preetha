@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- The <header> tag is used to define the introductory section at the top of a web page, often containing page titles, logos, and navigation menus. -->
+    <header >
+        <h1>Welcome to My Website</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+   
+
+    <!-- fundamental HTML tags used to structure and format web content -->
+
+    <!-- The <main> tag is used to define the main content section of a web page, where the primary content is placed. -->
+    <main>
+    <h1>A</h1>
+    <h2>B</h2>
+    <h3>C</h3>
+    <h4>D</h4>
+    <h5>E</h5>
+    <h6>F</h6>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa corporis perspiciatis amet, mollitia aspernatur excepturi impedit ipsum neque sunt minima eum facere cumque id exercitationem eius inventore laudantium in autem.</p>
+    <a href="https://vitestechnologies.com/">VITES</a>
+    <img src="" alt="">
+
+    <ul>
+        <li>Vites Technology</li>
+        <li>Coimbatore</li>
+    </ul>
+    <ol>
+        <li>Vites Technology</li>
+        <li>Coimbatore</li>
+    </ol>
+       
+    <dl> <!-- defines the container for the definition list. -->
+       <dt>Vites Technology</dt> <!-- define the term or name -->
+       <dd>Software Training Institution</dd> <!-- provide the description or definition of the term -->
+        <dt>Web Design</dt>
+        <dd>Html,CSS, JavaScript</dd>
+    </dl>
+
+    <!-- Table1 (more basic and relies on the browser's default behavior for handling header and data rows.) -->
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Bhuvanesh</td>
+        </tr>
+    </table>
+
+    <!-- Table2 (more structured approach, It explicitly separates the header, data, and footer parts of the table, which can be helpful for styling, scripting, and accessibility) -->
+    <table>
+        <caption>Your Table Caption</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>30</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total People: 2</td>
+            </tr>
+        </tfoot>
+    </table>
+   
+   
+    <!-- The <form> element is used to create an HTML form that allows users to input data and submit it to a web server for processing. -->
+    <form action="">
+        <!-- The for attribute should match the id of the form element it is associated with, linking them together. -->
+        <label for="username">Username</label>
+
+        <!-- The <input> element is used to create various types of input fields within a form. -->
+        <input type="text" id="username"><br>
+
+        <!-- multi-line text input area where users can enter longer pieces of text -->
+        <textarea name="" id="" cols="20" rows="3"></textarea><br>
+
+        <!-- The <select> element creates a dropdown menu, and <option> elements define the individual items in the menu, Users can choose one of the listed options. -->
+        <select name="" id="">
+            <option value="">Virat Kholi</option>
+            <option value="">Rohit Sharma</option>
+        </select><br>
+
+       <!-- The <button> element is used to create a clickable button within the form.
+        When users click it, it can trigger form submission or other JavaScript actions. -->
+    <button type="submit">Submit</button>
+    </form>
+
+    <!-- The HTML <fieldset> and <legend> elements are used together to group form controls and provide a title or description for the group. The <fieldset> element creates a container for the form controls, and the <legend> element provides a caption for the group.  -->
+   <fieldset>
+        <legend>Personal Information</legend>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos deleniti perspiciatis repellat ab temporibus quidem sequi tempora optio, ipsa distinctio consequatur voluptas nemo. In adipisci ullam eos doloremque. Nihil suscipit voluptas cum molestias repellendus perspiciatis recusandae iusto sit repudiandae. Voluptatibus impedit accusamus delectus corporis facilis rem reiciendis nemo sequi explicabo.</p>
+    </fieldset>
+
+    <p>This is some text.</p>
+    <!-- The HTML <hr> tag, which stands for "horizontal rule," is used to create a thematic break or horizontal line in a web page -->
+    <hr>
+    <p>Here's another paragraph separated by a horizontal rule.</p>
+    <pre>
+        This  is some
+        preformatted
+        text.
+     </pre>
+     
+     <!-- The <blockquote> tag is used to indicate that a specific section of text is a quotation from another source. It is often rendered with additional indentation or styling to visually set it apart from regular text -->
+    <blockquote>
+        <p>This is a quoted text from another source.</p>
+        <cite>- <a href="https://www.example.com">Source Name</a></cite>
+     </blockquote>
+     
+     
+    <!-- The <cite> tag is like a name tag for books, movies, or things you talk about in your writing. It tells everyone what you're talking about -->
+        <p>
+            I recently read an interesting article about web development. It was titled
+            "<cite>10 Tips for Better Web Design</cite>" by John Doe.
+        </p>
+
+    <!-- The <abbr> tag is used to mark up abbreviations or acronyms in your text, helping to provide a clear explanation of what the abbreviation stands for. -->
+        <p>HTML is short for <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
+
+   
+   
+         
+    <!-- The <code> tag is used to display inline sections of computer code or programming instructions within a webpage.    -->
+    <p>In order to print "Hello, world!" in Python, you can use the <code>print("Hello, world!")</code> statement.</p>
+
+    <!-- <em> emphasizes text by rendering it in italics -->
+    <p>This is <em>very</em> important!</p>
+
+    <!-- <strong> emphasizes text by making it bold -->
+    <p><strong>Warning:</strong> This action is irreversible!</p>
+
+    <!-- <mark> highlights text by adding a background color for visual distinction -->
+    <p>You can use the <mark>Ctrl+F</mark> shortcut to find text on a webpage.</p>
+
+    <!-- <sup> raises text as a superscript (e.g., for exponents)
+    <sub> lowers text as a subscript (e.g., in chemical formulas) -->
+        <p>The chemical formula for water is H<sub>2</sub>O, and the speed of light is 3 x 10<sup>8</sup> meters per second.</p>
+
+    <!-- The primary difference between typing a text address and using the <address> tag in HTML is that the <address> tag provides semantic meaning to the address and is typically used for contact information, such as the contact details for the author or owner of a webpage -->
+        <p>Contact us at: <address>
+            <a href="mailto:info@example.com">info@example.com</a><br>
+            123 Main Street, City, Country<br>
+            Phone: 555-123-4567
+        </address></p>
+
+  <!-- ---------------------------------------------------------------------------------------------------  -->
+ 
+   <!-- HTML also offers many more tags and attributes for various purposes, allowing web developers to create rich and interactive web pages. -->
+
+   <audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+  </audio>
+ 
+  <video controls>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+  <br>
+
+  <!-- An <iframe> (Inline Frame) is an HTML element used to embed content from another web page or source within the current web page, allowing you to display external content seamlessly within your own web page. -->
+  <iframe src="https://info.cern.ch/"></iframe>
+  <br>
+
+  <!-- The <svg> tag in HTML is used to embed Scalable Vector Graphics (SVG) for creating resolution-independent, two-dimensional vector graphics on web pages. -->
+  <svg width="200" height="100">
+    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+  </svg>
+
+  <!-- Normal HTML elements: Search engines and screen readers might have a harder time understanding the purpose and importance of content within generic elements like <div> or <p>. This can impact SEO and accessibility.
+  <article>,<section> tag: Search engines and assistive technologies recognize the <article> tag's semantic meaning, making it easier to identify and prioritize content. This can improve search engine rankings and accessibility for users who rely on screen readers. -->
+
+  <!-- The <section> tag in HTML is used to create a thematic grouping of content on a web page, helping to organize and structure the content for better clarity and meaning.  -->
+  <section>
+    <h2>About Us</h2>
+    <p>Learn more about our company's history and mission.</p>
+  </section>
+
+  <!-- The <article> tag in HTML is used to define a self-contained and independent piece of content, like a news article or blog post, making it suitable for reuse and syndication. -->
+  <article>
+    <h3>10 Tips for Healthy Living</h3>
+    <p>Here are some valuable tips to improve your overall well-being.</p>
+  </article>
+
+  <!-- The <nav> tag is used to create a navigation menu on a web page, containing links to different sections or pages of the website -->
+    <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- The <colgroup> tag in HTML is used to group and define a set of columns in a table, often in conjunction with <col> tags to specify properties and styles for those columns. -->
+      <table>
+        <colgroup>
+          <col style="background-color: #f2f2f2;">
+          <col style="background-color: #99cc99;">
+          <col style="background-color: #ffcc99;">
+        </colgroup>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+        <tr>
+          <td>Data 1</td>
+          <td>Data 2</td>
+          <td>Data 3</td>
+        </tr>
+      </table>
+<!-- The <marquee> tag in HTML creates scrolling text or image animations with attributes like "behavior" and "direction," but it's considered outdated and not recommended for modern web development. -->
+      <marquee behavior="scroll" direction="left">Text scrolls from right to left.</marquee>
+</main>
+ 
+   <!-- The <footer> tag is used to define the closing section at the bottom of a web page, typically containing copyright information and contact details. -->
+    <footer></footer>
+   
+<!-- --------------------------------------------------------------------------------------------------- -->
+   
+<!-- CSS Tag -->
+
+    <style></style>
+    <link rel="stylesheet" href="">
+    <div></div>
+    <span></span>
+
+<!-- --------------------------------------------------------------------------------------------------- -->
+
+<!-- JavaScript Tag -->
+
+    <!-- The <canvas> tag in HTML is used for creating a drawing area where you can use JavaScript to draw graphics. For example, <canvas id="myCanvas" width="200" height="100"></canvas> creates a 200x100 pixel canvas that you can draw on with JavaScript -->
+    <canvas id="myCanvas" width="400" height="200"></canvas>
+    <script></script>
+
+   
+
+</body>
+</html>

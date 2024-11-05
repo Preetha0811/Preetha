@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale = 1.0">
+    <title>Pseudo class and Pseudo elements</title>
+
+    <style>
+      .First:hover{
+        background-color: aqua;
+      }
+
+      .link:visited{
+        color: blueviolet;
+      }
+
+      .First:active {
+        background-color: green;
+        color: white;
+      }
+
+      .child :nth-child(3) {
+        color: blue;
+      }
+
+      input[type="checkbox"]:checked + span {
+        background-color: lightgreen;
+      }
+
+      .child::before{
+        content: "Good Morning";
+      }
+
+      .child::after{
+        content: "Thank you";
+      }
+
+      .elements::selection{
+        color: brown;
+      }
+
+      .elements::marker{
+        color: chocolate;
+      }
+
+      .main{
+        height: 80px;
+        width: 80px;
+        background-color: orange;
+        animation-name: test1;
+        animation-duration: 10s;
+        position: relative;
+        transform: skew(2deg,3deg);
+      }
+
+      @keyframes test1{
+        0%{
+          width: 200px;
+        }
+        50%{
+          width: 500px;
+          background-color: aqua;
+        }
+        100%{
+          width: 700px;
+          background-color: blue;
+        }
+      }
+
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <button class="First">
+      Click here
+    </button>
+    <br>
+    <div class="link">
+      <a href="https://www.flipkart.com/">Flipkart</a><br>
+    <a href="https://www.amazon.in/?tag=googmantxtmob170-21&ascsubtag=_k_Cj0KCQjw4Oe4BhCcARIsADQ0cslw4OtLLyIo89kxvTRMQWPpavbYqxnyUyXm-BN6fZiD0mnYhYirmnIaAn_dEALw_wcB_k_">Amazon</a><br>
+    <a href="https://www.ajio.com/?&utm_source=google&utm_medium=cpc&utm_campaign=GSB_Brand_August2019&gad_source=1&gclid=Cj0KCQjw4Oe4BhCcARIsADQ0cslRL9M7R3BdylAZM8YHtzhjJz5mh67KDFOq_ebCiRDh0j7AQJGIPkkaAlKcEALw_wcB">Ajio</a>
+    </div>
+
+    <div class="child">
+      <p>Hi</p>
+      <p>Hello</p>
+      <p>Good Eve</p>
+      <h1>Good Night</h1>
+    </div>
+
+    <label>
+      <input type="checkbox" class="checkbox1">
+      <span>Confirm</span>
+    </label>
+
+    <p class="elements">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nesciunt officiis deserunt obcaecati expedita dolorum veniam atque debitis, qui sint quos harum nam unde ratione id eligendi, non, tempore inventore doloremque vitae modi excepturi incidunt. Sed placeat vitae fuga temporibus maxime quia a, consequuntur quasi fugit optio quo alias praesentium aut quaerat recusandae ad ut repellat natus laborum amet, delectus, incidunt obcaecati sunt? Quasi iure est commodi necessitatibus repellat vitae in, libero cupiditate consequuntur, quis asperiores nesciunt perferendis minus similique soluta! Fuga maxime aperiam magnam atque cum cumque iste nisi nesciunt voluptatum tempore? Amet vel eaque rerum perferendis officiis reprehenderit.</p>
+
+    <div class="main">
+
+    </div>
+  
+  </body>
+</html>
